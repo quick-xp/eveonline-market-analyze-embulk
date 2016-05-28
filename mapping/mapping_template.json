@@ -1,0 +1,75 @@
+{
+    "template" : "*",
+    "mappings" : {
+      "embulk" : {
+        "properties" : {
+          "regionid" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "systemid" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "regionname" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "solarsystemname" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "security" : {
+            "type" : "double"
+          },
+          "security3" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "securityclass" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "typeid" : {
+            "type" : "long"
+          },
+          "typename" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "manufacture" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "group_level1" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "group_level2" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "group_level3" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "group_level4" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "group_level5" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "group_level6" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "group_level7" : {
+            "type" : "string","index": "not_analyzed"
+          },
+          "sum_price" : {
+            "type" : "long"
+          },
+          "average_price" : {
+            "type" : "double"
+          },
+          "sum_sell_count" : {
+            "type" : "long"
+          },
+          "reportedtime" : {
+            "type" : "date",
+            "format" : "strict_date_optional_time||epoch_millis"
+          }
+
+        }
+      }
+    }
+  }
+}

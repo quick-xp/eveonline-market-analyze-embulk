@@ -1,0 +1,42 @@
+in:
+  type: file
+  path_prefix: /home/cloudera/work/csv/market/
+  parser:
+    charset: UTF-8
+    newline: CRLF
+    type: csv
+    delimiter: ','
+    quote: '"'
+    escape: '"'
+    trim_if_not_quoted: false
+    skip_header_lines: 1
+    allow_extra_columns: false
+    allow_optional_columns: false
+    columns:
+    - {name: regionid, type: string}
+    - {name: systemid, type: string}
+    - {name: regionname, type: string}
+    - {name: solarsystemname, type: string}
+    - {name: security, type: double}
+    - {name: security3, type: string}
+    - {name: securityclass, type: string}
+    - {name: typeid, type: long}
+    - {name: typename, type: string}
+    - {name: manufacture, type: string}
+    - {name: group_level1, type: string}
+    - {name: group_level2, type: string}
+    - {name: group_level3, type: string}
+    - {name: group_level4, type: string}
+    - {name: group_level5, type: string}
+    - {name: group_level6, type: string}
+    - {name: group_level7, type: string}
+    - {name: sum_price, type: long}
+    - {name: average_price, type: string}
+    - {name: sum_sell_count, type: long}
+    - {name: reportedtime, type: timestamp, format: '%Y-%m-%d %H:%M:%S.%L'}
+out:
+  type: elasticsearch
+  index: eve-market
+  index_type: embulk
+  nodes:
+  - {host: localhost}

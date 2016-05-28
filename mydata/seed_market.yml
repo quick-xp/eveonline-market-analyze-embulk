@@ -1,0 +1,9 @@
+in:
+  type: file
+  path_prefix: /home/cloudera/work/csv/market
+out:
+  type: elasticsearch
+  index: eve-market
+  index_type: embulk
+  nodes:
+    - host: localhost
